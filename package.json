@@ -1,0 +1,28 @@
+{
+  "name": "playwright.ui.softwareseni",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prasetyo531/playwright.ui.softwareseni.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prasetyo531/playwright.ui.softwareseni/issues"
+  },
+  "homepage": "https://github.com/prasetyo531/playwright.ui.softwareseni#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.3",
+    "dotenv": "^16.5.0"
+  },
+  "packageManager": "yarn@4.9.2"
+}
