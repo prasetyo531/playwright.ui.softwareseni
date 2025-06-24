@@ -20,8 +20,6 @@ test.describe("Add Cart From Product List Page", () => {
 
     const cartCount = await inventoryPage.getCartCountText();
     expect(cartCount).toBe("2");
-
-    //   await page.pause();
   });
 
   test("Add cart with 3 items", async ({ page }) => {
@@ -40,8 +38,6 @@ test.describe("Add Cart From Product List Page", () => {
 
     const cartCount = await inventoryPage.getCartCountText();
     expect(cartCount).toBe("3");
-
-    //   await page.pause();
   });
 
   test("Add cart with 4 items", async ({ page }) => {
@@ -60,7 +56,5 @@ test.describe("Add Cart From Product List Page", () => {
 
     const cartCount = await inventoryPage.getCartCountText();
     expect(cartCount).toBe("4");
-
-    //   await page.pause();
   });
 });
