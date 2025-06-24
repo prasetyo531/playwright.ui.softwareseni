@@ -13,10 +13,10 @@ test.describe("Add Cart From Product List Page", () => {
       credentials.validUser.username,
       credentials.validUser.password
     );
+
     await inventoryPage.expectInventoryPage();
 
-    const added = await inventoryPage.clickRandomAddToCartButtons(2);
-    console.log("✅ Added products:", added);
+    await inventoryPage.clickRandomAddToCartButtons(2);
 
     const cartCount = await inventoryPage.getCartCountText();
     expect(cartCount).toBe("2");
@@ -31,10 +31,10 @@ test.describe("Add Cart From Product List Page", () => {
       credentials.validUser.username,
       credentials.validUser.password
     );
+
     await inventoryPage.expectInventoryPage();
 
-    const added = await inventoryPage.clickRandomAddToCartButtons(3);
-    console.log("✅ Added products:", added);
+    await inventoryPage.clickRandomAddToCartButtons(3);
 
     const cartCount = await inventoryPage.getCartCountText();
     expect(cartCount).toBe("3");
@@ -51,8 +51,7 @@ test.describe("Add Cart From Product List Page", () => {
     );
     await inventoryPage.expectInventoryPage();
 
-    const added = await inventoryPage.clickRandomAddToCartButtons(4);
-    console.log("✅ Added products:", added);
+    await inventoryPage.clickRandomAddToCartButtons(4);
 
     const cartCount = await inventoryPage.getCartCountText();
     expect(cartCount).toBe("4");

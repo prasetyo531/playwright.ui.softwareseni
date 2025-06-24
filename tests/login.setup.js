@@ -13,5 +13,6 @@ setup("authenticate", async ({ page }) => {
     credentials.validUser.username,
     credentials.validUser.password
   );
-  await page.context().storageState({ path: authFile })
+  
+  await page.context().storageState({ path: authFile });
 });

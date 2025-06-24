@@ -32,8 +32,6 @@ export class InventoryPage {
 
     for (const id of selectedIds) {
       const safeSelector = `#${cssEscape(id)}`;
-      //debug
-      console.log(`🛒 Clicking Add to Cart: ${safeSelector}`);
       await this.page.locator(safeSelector).click();
     }
 
