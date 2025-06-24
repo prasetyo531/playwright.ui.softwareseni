@@ -1,8 +1,11 @@
-import { test, expect } from "@playwright/test";
+import { test as setup } from "@playwright/test";
 import { LoginPage } from "../pages/login.page.js";
 import { credentials } from "../data/credentials.data.js";
+import path from "path";
 
-test("login only test", async ({ page }) => {
+const authFile = path.join(__dirname, "../playwright/.auth/user.json");
+
+setup("authenticate", async ({ page }) => {
   const loginPage = new LoginPage(page);
 
   await loginPage.goto();
@@ -10,6 +13,5 @@ test("login only test", async ({ page }) => {
     credentials.validUser.username,
     credentials.validUser.password
   );
-
-  await expect(page).toHaveURL("/inventory.html");
+  await page.context().storageState({ path: authFile })
 });
