@@ -22,6 +22,7 @@
   "devDependencies": {
     "@playwright/test": "^1.53.1",
     "@types/node": "^24.0.3",
+    "css.escape": "^1.5.1",
     "dotenv": "^16.5.0"
   },
   "packageManager": "yarn@4.9.2"
